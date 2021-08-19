@@ -95,7 +95,7 @@ export const classNames = {
   },
   table: {
     exist: 'table',
-  }
+  },
 };
 
 export const settings = {
