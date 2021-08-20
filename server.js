@@ -1,4 +1,4 @@
-/* global require, process */
+// /* global require, process */ eslint(no-redeclare)
 
 const fs = require('fs');
 const path = require('path');
