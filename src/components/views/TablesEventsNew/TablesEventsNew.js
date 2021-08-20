@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TablesEventsNew.module.scss';
+import styles from './TablesEventsNew.scss';
 
 const TablesEventsNew = () => {
   <div className={styles.component}>

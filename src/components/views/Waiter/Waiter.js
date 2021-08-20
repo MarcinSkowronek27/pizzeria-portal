@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Waiter.module.scss';
+import styles from './Waiter.scss';
 import { Link } from 'react-router-dom';
 
 const Waiter = () => {
