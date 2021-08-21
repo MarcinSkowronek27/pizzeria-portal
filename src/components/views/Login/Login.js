@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './login.scss';
+import styles from './Login.scss';
 
-const Login = () => {
+const Login = () => (
   <div className={styles.component}>
     <h2>
       Login view
     </h2>
-  </div>;
-};
+  </div>
+);
 
 export default Login;

@@ -14,7 +14,7 @@ import Dashboard from './components/views/Dashboard/Dashboard';
 
 function App() {
   return (
-    <BrowserRouter basename={'/'}>
+    <BrowserRouter>
       <MainLayout>
         <Switch>
           <Route exact path={`${process.env.PUBLIC_URL}/`} component={Dashboard} />
