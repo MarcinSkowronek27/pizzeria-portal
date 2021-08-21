@@ -11,6 +11,7 @@ import Waiter from './components/views/Waiter/Waiter';
 import WaiterOrderId from './components/views/WaiterOrderId/WaiterOrderId';
 import WaiterOrderNew from './components/views/WaiterOrderNew/WaiterOrderNew';
 import Dashboard from './components/views/Dashboard/Dashboard';
+import Kitchen from './components/views/Kitchen/Kitchen';
 
 function App() {
   return (
@@ -24,10 +25,12 @@ function App() {
           <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={TablesBookingNew} />
           <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={TablesEventsId} />
           <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={TablesEventsNew} />
-          <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={Waiter} />
-          <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={WaiterOrderId} />
-          <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={WaiterOrderNew} />
+          <Route exact path={`${process.env.PUBLIC_URL}/waiter`} component={Waiter} />
+          <Route exact path={`${process.env.PUBLIC_URL}/WaiterOrderId`} component={WaiterOrderId} />
+          <Route exact path={`${process.env.PUBLIC_URL}/WaiterOrderNew`} component={WaiterOrderNew} />
+          <Route exact path={`${process.env.PUBLIC_URL}/kitchen`} component={Kitchen} />
         </Switch>
+        {/* podziałać ze zmianą tables w adresach */}
       </MainLayout>
     </BrowserRouter>
   );
