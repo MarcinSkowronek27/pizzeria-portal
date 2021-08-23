@@ -6,10 +6,6 @@ const WaiterOrderId = () => (
     <h2>
       WaiterOrderId view
     </h2>
-    <div>
-      {this.props.match.params.id}
-      habababa
-    </div>
   </div>
 );
 

@@ -9,7 +9,7 @@ const Waiter = () => (
     </h2>
     <Link to={`${process.env.PUBLIC_URL}/waiter/order/new`} activeClassName='active'>New Order
     </Link>
-    <Link to={`${process.env.PUBLIC_URL}/waiter/order/:id`} activeClassName='active'>Edit Order
+    <Link to={`${process.env.PUBLIC_URL}/waiter/order/haba`} activeClassName='active'> Edit Order
     </Link>
   </div>
 );

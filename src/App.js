@@ -23,11 +23,11 @@ function App() {
           <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={Tables} />
           <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={TablesBookingId} />
           <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={TablesBookingNew} />
-          <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={TablesEventsId} />
+          <Route exact path={`${process.env.PUBLIC_URL}/tables/events/123abc`} component={TablesEventsId} />
           <Route exact path={`${process.env.PUBLIC_URL}/tables`} component={TablesEventsNew} />
           <Route exact path={`${process.env.PUBLIC_URL}/waiter`} component={Waiter} />
-          <Route exact path={`${process.env.PUBLIC_URL}/WaiterOrderId`} component={WaiterOrderId} />
-          <Route exact path={`${process.env.PUBLIC_URL}/WaiterOrderNew`} component={WaiterOrderNew} />
+          <Route exact path={`${process.env.PUBLIC_URL}/waiter/order/haba`} component={WaiterOrderId} />
+          <Route exact path={`${process.env.PUBLIC_URL}/waiter/order/new`} component={WaiterOrderNew} />
           <Route exact path={`${process.env.PUBLIC_URL}/kitchen`} component={Kitchen} />
         </Switch>
         {/* podziałać ze zmianą tables w adresach */}

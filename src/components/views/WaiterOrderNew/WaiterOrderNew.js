@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './WaiterOrderNew.module.scss';
+import styles from './WaiterOrderNew.scss';
 
 const WaiterOrderNew = () => (
   <div className={styles.component}>

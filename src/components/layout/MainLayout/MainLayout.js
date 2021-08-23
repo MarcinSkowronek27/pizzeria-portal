@@ -6,6 +6,7 @@ const MainLayout = props => (
   <div>
     <PageNav />
     {props.children}
+    {/* skąd on tu bierze dzieci? ASK*/}
   </div>
 );
 
