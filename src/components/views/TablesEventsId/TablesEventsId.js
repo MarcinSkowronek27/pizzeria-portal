@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TablesEventsId.module.scss';
+import styles from './TablesEventsId.scss';
 import { useParams } from 'react-router-dom';
 
 const TablesEventsId = () => {
@@ -9,7 +9,7 @@ const TablesEventsId = () => {
       <h2>
         TablesEventsId view
       </h2>
-      <span>Order Id: {id}</span>
+      <span>Event Id: {id}</span>
     </div>
   );
 };
