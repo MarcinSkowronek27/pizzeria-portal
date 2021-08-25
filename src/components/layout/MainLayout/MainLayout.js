@@ -3,16 +3,21 @@ import PropTypes from 'prop-types';
 import PageNav from '../PageNav/PageNav';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Container from '@material-ui/core/Container';
 
 const MainLayout = props => (
   <div>
     <AppBar>
-      <Toolbar>
-        <PageNav />
-      </Toolbar>
+      <Container maxWidth='lg'>
+        <Toolbar disableGutters>
+          <PageNav />
+        </Toolbar>
+      </Container>
     </AppBar>
-    <Toolbar />
-    {props.children}
+    <Container maxWidth='lg'>
+      <Toolbar />
+      {props.children}
+    </Container>
     {/* skąd on tu bierze dzieci? ASK*/}
   </div>
 );
