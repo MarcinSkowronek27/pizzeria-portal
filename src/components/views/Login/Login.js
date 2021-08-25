@@ -1,11 +1,10 @@
 import React from 'react';
-import styles from './Login.scss';
+import styles from './Login.module.scss';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import Toolbar from '@material-ui/core/Toolbar';
 import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import Visibility from '@material-ui/icons/Visibility';
@@ -35,9 +34,8 @@ const Login = () => {
 
   return (
     <div className={styles.component}>
-      <Container maxWidth='lg'>
-        <Toolbar />
-        <FormControl className={styles.margin}>
+      <Container maxWidth='lg' className={styles.container}>
+        <FormControl >
           <InputLabel htmlFor="input-with-icon-login">Login</InputLabel>
           <Input
             id="input-with-icon-adornment"
@@ -49,9 +47,9 @@ const Login = () => {
           />
         </FormControl>
       </Container>
-      <Container maxWidth='lg' >
-        <FormControl className={styles.login}>
-          <InputLabel  htmlFor="standard-adornment-password">Password</InputLabel>
+      <Container maxWidth='lg' className={styles.container}>
+        <FormControl >
+          <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
           <Input className={styles.login}
             id="standard-adornment-password"
             type={values.showPassword ? 'text' : 'password'}
@@ -71,7 +69,9 @@ const Login = () => {
           />
         </FormControl>
       </Container>
-      <Button className={styles.login}>Login</Button>
+      <Container className={styles.container} >
+        <Button className={styles.input}>Login</Button>
+      </Container>
     </div>
   );
 };

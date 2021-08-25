@@ -6,7 +6,7 @@
 
 # Logowanie
 
-- `/login`
+- `/login` DONE
   - pola na login i hasło
   - guzik do zalogowania (link do dashboardu)
 
@@ -31,7 +31,7 @@
 
 # Widok kelnera
 
-- `/waiter`
+- `/waiter` DONE
   - tabela
     - w wierszach stoliki
     - w kolumnach różne rodzaje informacji (status, czas od ostatniej aktywności)
