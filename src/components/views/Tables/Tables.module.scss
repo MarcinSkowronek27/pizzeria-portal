@@ -1,0 +1,16 @@
+@import '../../../styles/settings.scss';
+
+.component {
+  padding: $base-size;
+}
+
+.button {
+  border: solid 1px #2B4C6F;
+  &:hover {
+    background-color:#2B4C6F;
+    color: white;
+  }
+  &:not(:first-child){
+    margin-left: 10px;
+  }
+}

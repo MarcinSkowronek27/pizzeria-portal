@@ -47,7 +47,7 @@
 
 # Widok kuchni
 
-- `/kitchen`
+- `/kitchen` DONE
   - wyświetlać listę zamówień w kolejności ich złożenia
   - lista musi zawierać:
     - numer stolika (lub zamówienia zdalnego)
