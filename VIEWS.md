@@ -12,7 +12,7 @@
 
 # Widok dostępności stolików
 
-- `/tables`
+- `/tables` DONE
   - wybór daty i godziny
   - tabela z listą rezerwacji oraz wydarzeń
     - każda kolumna = 1 stolik

@@ -25,17 +25,35 @@ const Tables = () => {
     createData('14:00', null, 'Angelina Jolie', null, null, null, null),
     createData('14:30', null, null, null, null, null, null),
     createData('15:00', null, null, null, null, null, 'John White'),
+    createData('15:30', null, null, null, null, null, null),
+    createData('16:00', null, null, null, null, 'George Bush', null),
+    createData('16:30', null, null, null, null, null, null),
+    createData('17:00', null, null, 'Jimmy Bow', null, null, null),
+    createData('17:30', null, null, null, null, null, null),
+    createData('18:00', null, null, 'Marek Konrad', null, null, null),
+    createData('18:30', null, null, null, null, null, null),
+    createData('19:00', null, null, null, null, null, null),
+    createData('19:30', null, null, null, null, null, null),
+    createData('20:00', null, null, null, null, null, null),
+    createData('20:30', null, 'Bruce Willis', 'Jackie Chan', null, null, null),
+    createData('21:00', null, null, null, null, null, null),
+    createData('21:30', null, null, null, null, null, null),
+    createData('22:00', null, 'przyjęcie rodzinne', null, null, null, null),
+    createData('22:30', null, null, null, null, null, null),
+    createData('23:00', null, null, null, null, null, null),
+    createData('23:30', 'Michael Jackson', null, null, null, null, null),
+    createData('00:00', null, null, null, null, null, null),
   ];
   return (
     <div className={styles.component}>
       <Button className={styles.button} component={Link} to={`${process.env.PUBLIC_URL}/tables/booking/new`} activeClassName='active'>New Table
       </Button>
-      <Button className={styles.button} component={Link} to={`${process.env.PUBLIC_URL}/tables/booking/:id`} activeClassName='active'> Edit Table
-      </Button>
+      {/* <Button className={styles.button} component={Link} to={`${process.env.PUBLIC_URL}/tables/booking/:id`} activeClassName='active'> Edit Table
+      </Button> */}
       <Button className={styles.button} component={Link} to={`${process.env.PUBLIC_URL}/tables/events/new`} activeClassName='active'> New Event
       </Button>
-      <Button className={styles.button} component={Link} to={`${process.env.PUBLIC_URL}/tables/events/:id`} activeClassName='active'> Edit Event
-      </Button>
+      {/* <Button className={styles.button} component={Link} to={`${process.env.PUBLIC_URL}/tables/events/:id`} activeClassName='active'> Edit Event
+      </Button> */}
       <Paper className={styles.container}>
         <form noValidate>
           <TextField
@@ -53,12 +71,12 @@ const Tables = () => {
           <TableHead>
             <TableRow>
               <TableCell>Hour</TableCell>
-              <TableCell align="right">Table 1</TableCell>
-              <TableCell align="right">Table 2</TableCell>
-              <TableCell align="right">Table 3</TableCell>
-              <TableCell align="right">Table 4</TableCell>
-              <TableCell align="right">Table 5</TableCell>
-              <TableCell align="right">Table 6</TableCell>
+              <TableCell align="center">Table 1</TableCell>
+              <TableCell align="center">Table 2</TableCell>
+              <TableCell align="center">Table 3</TableCell>
+              <TableCell align="center">Table 4</TableCell>
+              <TableCell align="center">Table 5</TableCell>
+              <TableCell align="center">Table 6</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
