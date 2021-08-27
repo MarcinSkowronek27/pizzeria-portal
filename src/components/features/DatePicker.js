@@ -18,15 +18,18 @@ export default function DatePickers() {
   const classes = useStyles();
 
   return (
-    <form className={classes.container} noValidate>
+    <form noValidate>
       <TextField
-        id="date"
-        label="Date"
-        type="date"
-        defaultValue="2021-08-27"
+        id="datetime-local"
+        label="Pick a Date and Time"
+        type="datetime-local"
+        defaultValue="2021-08-26T10:30"
         className={classes.textField}
         InputLabelProps={{
           shrink: true,
+        }}
+        inputProps={{
+          step: 1800, // 30 min
         }}
       />
     </form>
