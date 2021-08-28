@@ -15,7 +15,7 @@ export default function BasicTextFields() {
   const classes = useStyles();
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="standard-basic" placeholder="Name" type="text"/>
+      <TextField id="standard-basic" placeholder="Text" type="text"/>
     </form>
   );
 }

@@ -12,6 +12,7 @@ import BasicTextFields from '../../features/TextField';
 import BasicNumberFields from '../../features/numberField';
 import MultilineTextFields from '../../features/selectFieldDish';
 import DrinksTextFields from '../../features/selectFieldDrinks';
+import Container from '@material-ui/core/Container';
 
 function createData(info, details) {
   return { info, details };
@@ -19,11 +20,12 @@ function createData(info, details) {
 
 const rows = [
   createData('Date and Time:', <DatePickers />),
-  createData('Name:', <BasicTextFields/>),
-  createData('Table No:', <BasicNumberFields/>),
-  createData('Choose a dish:', <MultilineTextFields/>),
-  createData('Choose a drink:', <DrinksTextFields/>),
-  createData('Number of people:',<BasicNumberFields/>),
+  createData('Name:', <BasicTextFields />),
+  createData('Table No:', <BasicNumberFields />),
+  createData('Choose a dish:', <MultilineTextFields />),
+  createData('Choose a drink:', <DrinksTextFields />),
+  createData('Number of people:', <BasicNumberFields />),
+  createData('Deliver to (if delivery):', <BasicTextFields />),
 ];
 
 const TablesBookingNew = () => (
@@ -50,9 +52,11 @@ const TablesBookingNew = () => (
           ))}
         </TableBody>
       </Table>
-      <Button color="primary"
-        variant="outlined">Add
-      </Button>
+      <Container className={styles.button}>
+        <Button  color="primary"
+          variant="outlined">Add Reservation
+        </Button>
+      </Container>
     </Paper>
   </div>
 );
