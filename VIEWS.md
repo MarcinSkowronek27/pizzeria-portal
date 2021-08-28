@@ -22,7 +22,7 @@
 - `/tables/booking/:id`
   - zawiera wszystkie informacje dotyczące rezerwacji
   - umożliwia edycję i zapisanie zmian
-- `/tables/booking/new`
+- `/tables/booking/new` DONE
   - analogicznie do powyższej, bez początkowych informacji
 - `/tables/events/:id`
   - analogicznie do powyższej, dla eventów
