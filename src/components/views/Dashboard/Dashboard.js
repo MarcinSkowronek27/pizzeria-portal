@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Chart from '../../features/Chart';
+// import Chart from '../../features/Chart';
 import ReservationsAll from '../../features/form/ReservationsAll';
 import EventsAll from '../../features/EventsAll/EventsAll';
 import Reservations from '../../features/Reservations/Reservations';
@@ -71,12 +71,12 @@ const useStyles = makeStyles(theme => ({
       width: theme.spacing(9),
     },
   },
-  appBarSpacer: theme.mixins.toolbar,
-  content: {
-    flexGrow: 1,
-    height: '100vh',
-    overflow: 'auto',
-  },
+  // appBarSpacer: theme.mixins.toolbar,
+  // content: {
+  //   flexGrow: 1,
+  //   height: '100vh',
+  //   overflow: 'auto',
+  // },
   container: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
@@ -100,15 +100,16 @@ export default function Dashboard() {
     <div className={classes.root}>
       <CssBaseline />
       <main className={classes.content}>
-        <div className={classes.appBarSpacer} />
+        {/* <div className={classes.appBarSpacer} /> */}
+        {/* ciekawy sposób powyżej - użycie pustego diva, żeby zrobić sobie miejsce na stronie - odsunięcie elementów od górnego paska TIPS*/}
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             {/* Chart */}
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <Paper className={fixedHeightPaper}>
                 <Chart />
               </Paper>
-            </Grid>
+            </Grid> */}
             {/* All today's orders */}
             <Grid item xs={12} md={6}>
               <Paper className={fixedHeightPaper}>
