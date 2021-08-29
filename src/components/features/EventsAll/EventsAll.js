@@ -14,7 +14,7 @@ export default function EventsAll() {
     <React.Fragment>
      All events today
       <Typography component="p" variant="h3">
-        6
+        4
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
         on 28 October, 2021
