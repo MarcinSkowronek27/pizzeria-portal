@@ -14,10 +14,10 @@ export default function ReservationsAll() {
     <React.Fragment>
       All reservations today
       <Typography component="p" variant="h3">
-        11
+        8
       </Typography>
       <Typography color="textSecondary" className={classes.context}>
-        on 28 October, 2021
+        on 29 October, 2021
       </Typography>
     </React.Fragment>
   );

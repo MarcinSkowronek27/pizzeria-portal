@@ -12,71 +12,56 @@ function createData(
   id,
   date,
   name,
-  shipTo,
   table,
   hour,
   paymentMethod,
   amount
 ) {
-  return { id, date, name, shipTo, table, hour, paymentMethod, amount };
+  return { id, date, name, table, hour, paymentMethod, amount };
 }
 
 const rows = [
   createData(
     0,
-    '15 Mar, 2019',
-    'Ezmae Marshall',
-    'Fargo, ND',
+    '29 Oct, 2021',
+    'Angelina Jolie',
     '2',
-    '12:00',
+    '14:00',
     'VISA ⠀•••• 2704',
-    659.72
+    820.00
   ),
   createData(
     1,
-    '15 Mar, 2019',
-    'Eddie Benton',
-    'Grand Prairie, TX',
-    '3',
-    '12:00',
-    'MC ⠀•••• 5612',
-    222.32
+    '29 Oct, 2021',
+    'George Bush',
+    '5',
+    '16:00',
+    'MC ⠀•••• 5614',
+    562.81
   ),
   createData(
     2,
-    '15 Mar, 2019',
-    'Rose Leonard',
-    'Huntsville, AL',
-    '4',
-    '14:30',
-    'AMEX ⠀•••• 4590',
-    411.57
+    '29 Oct, 2021',
+    'Bruce Willis',
+    '2',
+    '20:30',
+    'CASH',
+    340.20
   ),
   createData(
     3,
-    '15 Mar, 2019',
-    'Joe Bowers',
-    'Murfreesboro, TN',
-    '5',
-    '14:30',
-    'VISA ⠀•••• 6723',
-    541.22
-  ),
-  createData(
-    4,
-    '15 Mar, 2019',
-    'Dan Lynn',
-    'Boise, ID',
-    '1',
-    '19:30',
-    'VISA ⠀•••• 5678',
-    378.11
+    '29 Oct, 2021',
+    'Jackie Chan',
+    '3',
+    '20:30',
+    'VISA ⠀•••• 6721',
+    448.98
   ),
 ];
 
-function preventDefault(event) {
-  event.preventDefault();
-}
+// function preventDefault(event) {
+//   event.preventDefault();
+// }
 
 const useStyles = makeStyles(theme => ({
   seeMore: {
@@ -88,13 +73,12 @@ export default function Events() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      Events
+      <h3>Events</h3>
       <Table size="small">
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
             <TableCell>Name</TableCell>
-            <TableCell>Ship To</TableCell>
             <TableCell>Table No.</TableCell>
             <TableCell>Hour</TableCell>
             <TableCell>Payment Method</TableCell>
@@ -106,7 +90,6 @@ export default function Events() {
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.name}</TableCell>
-              <TableCell>{row.shipTo}</TableCell>
               <TableCell>{row.table}</TableCell>
               <TableCell>{row.hour}</TableCell>
               <TableCell>{row.paymentMethod}</TableCell>
@@ -116,7 +99,7 @@ export default function Events() {
         </TableBody>
       </Table>
       <div className={classes.seeMore}>
-        <Link color="primary" href="#" onClick={preventDefault}>
+        <Link color="primary" href='http://localhost:3000/panel/tables'>
           See more events
         </Link>
       </div>

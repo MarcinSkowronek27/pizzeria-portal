@@ -22,11 +22,11 @@ const Tables = () => {
     createData('12:30', null, null, null, null, null, null),
     createData('13:00', null, null, null, null, null, null),
     createData('13:30', null, null, 'Adam Malysz', null, null, null),
-    createData('14:00', null, 'Angelina Jolie', null, null, null, null),
+    createData('14:00', null, 'Angelina Jolie', null, null, null, null), /* */
     createData('14:30', null, null, null, null, null, null),
     createData('15:00', null, null, null, null, null, 'John White'),
     createData('15:30', null, null, null, null, null, null),
-    createData('16:00', null, null, null, null, 'George Bush', null),
+    createData('16:00', null, null, null, null, 'George Bush', null), /* */
     createData('16:30', null, null, null, null, null, null),
     createData('17:00', null, null, 'Jimmy Bow', null, null, null),
     createData('17:30', null, null, null, null, null, null),
@@ -35,10 +35,10 @@ const Tables = () => {
     createData('19:00', null, null, null, null, null, null),
     createData('19:30', null, null, null, null, null, null),
     createData('20:00', null, null, null, null, null, null),
-    createData('20:30', null, 'Bruce Willis', 'Jackie Chan', null, null, null),
+    createData('20:30', null, 'Bruce Willis', 'Jackie Chan', null, null, null), /* */
     createData('21:00', null, null, null, null, null, null),
     createData('21:30', null, null, null, null, null, null),
-    createData('22:00', null, 'przyjęcie rodzinne', null, null, null, null),
+    createData('22:00', null, 'Krzysztof Ibisz', null, null, null, null),
     createData('22:30', null, null, null, null, null, null),
     createData('23:00', null, null, null, null, null, null),
     createData('23:30', 'Michael Jackson', null, null, null, null, null),

@@ -12,131 +12,101 @@ function createData(
   id,
   date,
   name,
-  shipTo,
+  deliverTo,
   table,
   hour,
   paymentMethod,
   amount
 ) {
-  return { id, date, name, shipTo, table, hour, paymentMethod, amount };
+  return { id, date, name, deliverTo, table, hour, paymentMethod, amount };
 }
 
 const rows = [
   createData(
     0,
-    '15 Mar, 2019',
-    'Michael Jackson',
-    'Gary, IN',
-    '1',
-    '14:00',
-    'AMEX ⠀•••• 2000',
-    654.39
+    '29 Oct, 2021',
+    'Zygmunt III Waza',
+    'ON SITE',
+    '2',
+    '12:00',
+    'CASH',
+    125.34
   ),
   createData(
     1,
-    '15 Mar, 2019',
-    'Bruce Springsteen',
-    'Long Branch, NJ',
-    '2',
-    '14:00',
+    '29 Oct, 2021',
+    'Królowa Bona',
+    'Kinder Strasse, DE',
+    '',
+    '12:00',
     'VISA ⠀•••• 5919',
-    212.79
+    78.85
   ),
   createData(
     2,
-    '15 Mar, 2019',
-    'Dale Baldwin',
-    'Green Bay, WI',
-    '3',
-    '14:00',
-    'MC ⠀•••• 3349',
-    412.22
+    '29 Oct, 2021',
+    'Adam Malysz',
+    'Lotnicza 5, PL',
+    '',
+    '13:30',
+    'VISA ⠀•••• 3349',
+    128.50
   ),
   createData(
     3,
-    '15 Mar, 2019',
-    'Kiana Rivers',
-    'Denver, CO',
-    '4',
+    '29 Oct, 2021',
+    'John White',
+    'ON SITE',
+    '6',
     '15:00',
     'VISA ⠀•••• 5919',
-    156.39
+    95.39
   ),
   createData(
     4,
-    '15 Mar, 2019',
-    'Bluebell Durham',
-    'Alexandria, VA',
-    '2',
-    '16:00',
-    'AMEX ⠀•••• 2210',
-    600.02
+    '29 Oct, 2021',
+    'Jimmy Bow',
+    'ON SITE',
+    '3',
+    '17:00',
+    'CASH',
+    40.19
   ),
   createData(
     5,
-    '15 Mar, 2019',
-    'Sonnie Velasquez',
-    'San Jose, CA',
-    '3',
-    '16:00',
-    'MC ⠀•••• 4836',
-    345.72
+    '29 Oct, 2021',
+    'Marek Konrad',
+    'Ogrodowa 5, CA',
+    '',
+    '18:00',
+    'MASTER ⠀•••• 4836',
+    131.20
   ),
   createData(
     6,
-    '15 Mar, 2019',
-    'Joel Fitzgerald',
-    'Henderson, NV',
-    '4',
-    '16:00',
+    '29 Oct, 2021',
+    'Krzysztof Ibisz',
+    'ON SITE',
+    '2',
+    '22:00',
     'VISA ⠀•••• 5919',
-    201.44
+    195.85
   ),
   createData(
     7,
-    '15 Mar, 2019',
-    'Theodore Acosta',
-    'Filadelfia, PA',
-    '5',
-    '16:30',
+    '29 Oct, 2021',
+    'Michael Jackson',
+    'Bronx, NY',
+    '',
+    '23:30',
     'MC ⠀•••• 5789',
-    451.73
-  ),
-  createData(
-    8,
-    '15 Mar, 2019',
-    'Elvis Presley',
-    'Tupelo, MS',
-    '3',
-    '18:00',
-    'VISA ⠀•••• 3719',
-    312.44
-  ),
-  createData(
-    9,
-    '15 Mar, 2019',
-    'Paul McCartney',
-    'London, UK',
-    '4',
-    '21:30',
-    'VISA ⠀•••• 2574',
-    866.99
-  ),
-  createData(
-    10,
-    '15 Mar, 2019',
-    'Tom Scholz',
-    'Boston, MA',
-    '5',
-    '21:30',
-    'MC ⠀•••• 1253',
-    100.81
+    203.12
   ),
 ];
 
-function preventDefault(event) {
-  event.preventDefault();
-}
+// function preventDefault(event) {
+//   event.preventDefault();
+// }
 
 const useStyles = makeStyles(theme => ({
   seeMore: {
@@ -148,13 +118,13 @@ export default function Reservations() {
   const classes = useStyles();
   return (
     <React.Fragment>
-     Reservations
+      <h3>Reservations</h3>
       <Table size="small">
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
             <TableCell>Name</TableCell>
-            <TableCell>Ship To</TableCell>
+            <TableCell>Deliver To</TableCell>
             <TableCell>Table No.</TableCell>
             <TableCell>Hour</TableCell>
             <TableCell>Payment Method</TableCell>
@@ -166,7 +136,7 @@ export default function Reservations() {
             <TableRow key={row.id}>
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.name}</TableCell>
-              <TableCell>{row.shipTo}</TableCell>
+              <TableCell>{row.deliverTo}</TableCell>
               <TableCell>{row.table}</TableCell>
               <TableCell>{row.hour}</TableCell>
               <TableCell>{row.paymentMethod}</TableCell>
@@ -176,7 +146,7 @@ export default function Reservations() {
         </TableBody>
       </Table>
       <div className={classes.seeMore}>
-        <Link color="primary" href="#" onClick={preventDefault}>
+        <Link color="primary" href='http://localhost:3000/panel/tables'>
           See more reservations
         </Link>
       </div>
