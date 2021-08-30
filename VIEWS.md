@@ -1,6 +1,6 @@
 # Dashboard
 
-  - `/`
+  - `/` DONE
     - statystyki dzisiejszych zamówień (zdalne i lokalne)
     - listę rezerwacji i eventów zaplanowanych na dzisiaj
 
@@ -26,7 +26,7 @@
   - analogicznie do powyższej, bez początkowych informacji
 - `/tables/events/:id`
   - analogicznie do powyższej, dla eventów
-- `/tables/events/new`
+- `/tables/events/new` DONE
   - analogicznie do powyższej, dla eventów, bez początkowych informacji
 
 # Widok kelnera
@@ -36,7 +36,7 @@
     - w wierszach stoliki
     - w kolumnach różne rodzaje informacji (status, czas od ostatniej aktywności)
     - w ostatniej kolumnie dostępne akcje dla danego stolika
-- `/waiter/order/new`
+- `/waiter/order/new` DONE MS
   - numer stolika (edytowalny)
   - menu produktów
   - opcje wybranego produktu
