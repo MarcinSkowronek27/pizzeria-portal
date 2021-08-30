@@ -13,36 +13,36 @@ import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 
 const Tables = () => {
 
-  function createData(hour, table1, table2, table3, table4, table5, table6) {
-    return { hour, table1, table2, table3, table4, table5, table6 };
+  function createData(hour, table1, table2, table3, table4, table5, table6, typeTable) {
+    return { hour, table1, table2, table3, table4, table5, table6, typeTable };
   }
 
   const rows = [
-    createData('12:00', null, 'Zygmunt III Waza', 'Królowa Bona', null, null, null),
-    createData('12:30', null, null, null, null, null, null),
-    createData('13:00', null, null, null, null, null, null),
-    createData('13:30', null, null, 'Adam Malysz', null, null, null),
-    createData('14:00', null, 'Angelina Jolie', null, null, null, null), /* */
-    createData('14:30', null, null, null, null, null, null),
-    createData('15:00', null, null, null, null, null, 'John White'),
-    createData('15:30', null, null, null, null, null, null),
-    createData('16:00', null, null, null, null, 'George Bush', null), /* */
-    createData('16:30', null, null, null, null, null, null),
-    createData('17:00', null, null, 'Jimmy Bow', null, null, null),
-    createData('17:30', null, null, null, null, null, null),
-    createData('18:00', null, null, 'Marek Konrad', null, null, null),
-    createData('18:30', null, null, null, null, null, null),
-    createData('19:00', null, null, null, null, null, null),
-    createData('19:30', null, null, null, null, null, null),
-    createData('20:00', null, null, null, null, null, null),
-    createData('20:30', null, 'Bruce Willis', 'Jackie Chan', null, null, null), /* */
-    createData('21:00', null, null, null, null, null, null),
-    createData('21:30', null, null, null, null, null, null),
-    createData('22:00', null, 'Krzysztof Ibisz', null, null, null, null),
-    createData('22:30', null, null, null, null, null, null),
-    createData('23:00', null, null, null, null, null, null),
-    createData('23:30', 'Michael Jackson', null, null, null, null, null),
-    createData('00:00', null, null, null, null, null, null),
+    createData('12:00', null, 'Zygmunt III Waza', 'Królowa Bona', null, null, null, 'booking'),
+    createData('12:30', null, null, null, null, null, null, 'booking'),
+    createData('13:00', null, null, null, null, null, null, 'booking'),
+    createData('13:30', null, null, 'Adam Malysz', null, null, null, 'booking'),
+    createData('14:00', null, 'Angelina Jolie', null, null, null, null, 'events'), /* */
+    createData('14:30', null, null, null, null, null, null, 'booking'),
+    createData('15:00', null, null, null, null, null, 'John White', 'booking'),
+    createData('15:30', null, null, null, null, null, null, 'booking'),
+    createData('16:00', null, null, null, null, 'George Bush', null, 'events'), /* */
+    createData('16:30', null, null, null, null, null, null, 'booking'),
+    createData('17:00', null, null, 'Jimmy Bow', null, null, null, 'booking'),
+    createData('17:30', null, null, null, null, null, null, 'booking'),
+    createData('18:00', null, null, 'Marek Konrad', null, null, null, 'booking'),
+    createData('18:30', null, null, null, null, null, null, 'booking'),
+    createData('19:00', null, null, null, null, null, null, 'booking'),
+    createData('19:30', null, null, null, null, null, null, 'booking'),
+    createData('20:00', null, null, null, null, null, null, 'booking'),
+    createData('20:30', null, 'Bruce Willis', 'Jackie Chan', null, null, null, 'events'), /* */
+    createData('21:00', null, null, null, null, null, null, 'booking'),
+    createData('21:30', null, null, null, null, null, null, 'booking'),
+    createData('22:00', null, 'Krzysztof Ibisz', null, null, null, null, 'booking'),
+    createData('22:30', null, null, null, null, null, null, 'booking'),
+    createData('23:00', null, null, null, null, null, null, 'booking'),
+    createData('23:30', 'Michael Jackson', null, null, null, null, null, 'booking'),
+    createData('00:00', null, null, null, null, null, null, 'booking'),
   ];
   return (
     <div className={styles.component}>
@@ -91,7 +91,7 @@ const Tables = () => {
                       size="small"
                       variant="outlined"
                       color="primary"
-                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table1}`}
+                      to={`${process.env.PUBLIC_URL}/tables/${row.typeTable}/${row.table1}`}
                     >
                       {row.table1}
                     </Button>
@@ -105,7 +105,7 @@ const Tables = () => {
                       size="small"
                       variant="outlined"
                       color="primary"
-                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table2}`}
+                      to={`${process.env.PUBLIC_URL}/tables/${row.typeTable}/${row.table2}`}
                     >
                       {row.table2}
                     </Button>
@@ -119,7 +119,7 @@ const Tables = () => {
                       size="small"
                       variant="outlined"
                       color="primary"
-                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table3}`}
+                      to={`${process.env.PUBLIC_URL}/tables/${row.typeTable}/${row.table3}`}
                     >
                       {row.table3}
                     </Button>
@@ -133,7 +133,7 @@ const Tables = () => {
                       size="small"
                       variant="outlined"
                       color="primary"
-                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table4}`}
+                      to={`${process.env.PUBLIC_URL}/tables/${row.typeTable}/${row.table4}`}
                     >
                       {row.table4}
                     </Button>
@@ -147,7 +147,7 @@ const Tables = () => {
                       size="small"
                       variant="outlined"
                       color="primary"
-                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table5}`}
+                      to={`${process.env.PUBLIC_URL}/tables/${row.typeTable}/${row.table5}`}
                     >
                       {row.table5}
                     </Button>
@@ -161,7 +161,7 @@ const Tables = () => {
                       size="small"
                       variant="outlined"
                       color="primary"
-                      to={`${process.env.PUBLIC_URL}/tables/booking/${row.table6}`}
+                      to={`${process.env.PUBLIC_URL}/tables/${row.typeTable}/${row.table6}`}
                     >
                       {row.table6}
                     </Button>
