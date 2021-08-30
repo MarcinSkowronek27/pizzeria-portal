@@ -42,7 +42,7 @@
   - opcje wybranego produktu
   - zamówienie (zamówione produkty z opcjami i ceną)
   - kwotę zamówienia
-- `/waiter/order/:id`
+- `/waiter/order/:id` DONE MS
   - jak powyższa
 
 # Widok kuchni

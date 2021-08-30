@@ -21,8 +21,6 @@ const rows = [
   createData('Table No:', <BasicNumberFields />),
   createData('Choose a dish:', <MultilineTextFields />),
   createData('Option of chosen dish:', <OptionTextFields />),
-  // createData('Dishes:', ['Four Cheese - 1$', ', Water - 4,5$', ', Pizza Margherita - 12$']),
-  // createData('Total order amount:', 17.5 + '$'),
   createData('Dishes:', <BasicTextFields/>),
   createData('Total order amount:', <BasicTextFields />),
 ];
