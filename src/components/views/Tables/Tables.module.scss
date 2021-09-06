@@ -25,9 +25,21 @@
 
 .textField {
   width: 200;
+  // border: solid 1px red;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .table {
   min-width: 650px;
   margin-top: 100px;
 }
+
+label {
+  display: inline-block;
+  width: auto;
+  margin-left: 45px;
+  padding: auto;
+}
+

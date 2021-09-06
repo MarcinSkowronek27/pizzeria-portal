@@ -44,6 +44,13 @@ const Tables = () => {
     createData('23:30', 'Michael Jackson', null, null, null, null, null, 'booking'),
     createData('00:00', null, null, null, null, null, null, 'booking'),
   ];
+
+  const inputProps = {
+    step: 600,
+    shrink: true,
+    disabled: true,
+  };
+
   return (
     <div className={styles.component}>
       <Button className={styles.button} component={Link} to={`${process.env.PUBLIC_URL}/tables/booking/new`} activeClassName='active'>New Table
@@ -60,11 +67,10 @@ const Tables = () => {
             id="datetime-local"
             label="Pick a Date and Time"
             type="datetime-local"
+            variant="standard"
             defaultValue="2021-08-26T10:30"
             className={styles.textField}
-            InputLabelProps={{
-              shrink: true,
-            }}
+            InputLabelProps={inputProps}
           />
         </form>
         <Table className={styles.table} size="small" aria-label="a dense table">
