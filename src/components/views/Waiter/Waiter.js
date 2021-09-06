@@ -16,6 +16,7 @@ class Waiter extends React.Component {
       active: PropTypes.bool,
       error: PropTypes.oneOfType([PropTypes.bool,PropTypes.string]),
     }),
+    tables: PropTypes.any,
   }
 
   componentDidMount(){
@@ -86,7 +87,7 @@ class Waiter extends React.Component {
               </TableRow>
             </TableHead>
             <TableBody>
-              {tables.map((row) => (
+              {tables.map(row => (
                 <TableRow key={row.id}>
                   <TableCell component="th" scope="row">
                     {row.id}
