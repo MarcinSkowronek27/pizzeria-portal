@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <div className={styles.component}>
       <Container maxWidth='lg' className={styles.container}>
-        <FormControl >
+        <FormControl>
           <InputLabel htmlFor="input-with-icon-login">Login</InputLabel>
           <Input
             id="input-with-icon-adornment"
@@ -48,7 +48,7 @@ const Login = () => {
         </FormControl>
       </Container>
       <Container maxWidth='lg' className={styles.container}>
-        <FormControl >
+        <FormControl>
           <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
           <Input className={styles.login}
             id="standard-adornment-password"

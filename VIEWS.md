@@ -19,12 +19,12 @@
     - każdy wiersz = 30 minut
     - ma przypominać widok tygodnia w kalendarzu Google, gdzie w kolumnach zamiast dni są różne stoliki
     - po kliknięciu rezerwacji lub eventu, przechodzimy na stronę szczegółów
-- `/tables/booking/:id`
+- `/tables/booking/:id` DONE MS
   - zawiera wszystkie informacje dotyczące rezerwacji
   - umożliwia edycję i zapisanie zmian
 - `/tables/booking/new` DONE
   - analogicznie do powyższej, bez początkowych informacji
-- `/tables/events/:id`
+- `/tables/events/:id` DONE MS
   - analogicznie do powyższej, dla eventów
 - `/tables/events/new` DONE
   - analogicznie do powyższej, dla eventów, bez początkowych informacji
