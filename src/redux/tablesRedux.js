@@ -13,11 +13,13 @@ const createActionName = name => `app/${reducerName}/${name}`;
 const FETCH_START = createActionName('FETCH_START');
 const FETCH_SUCCESS = createActionName('FETCH_SUCCESS');
 const FETCH_ERROR = createActionName('FETCH_ERROR');
+const UPDATE_TABLES = createActionName('UPDATE_TABLES');
 
 /* action creators */
 export const fetchStarted = payload => ({ payload, type: FETCH_START });
 export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
+export const updateTables = payload => ({ payload, type: UPDATE_TABLES });
 
 /* thunk creators */
 export const fetchFromAPI = () => {
@@ -32,6 +34,13 @@ export const fetchFromAPI = () => {
       .catch(err => {
         dispatch(fetchError(err.message || true));
       });
+  };
+};
+
+export const updateTablesStatus = (tableId, newStatus) => {
+  console.log(tableId, newStatus);
+  return (dispatch, getState) => {
+
   };
 };
 
