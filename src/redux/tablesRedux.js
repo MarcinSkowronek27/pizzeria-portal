@@ -2,8 +2,8 @@ import Axios from 'axios';
 import { api } from '../settings';
 
 /* selectors */
-export const getAll = ({tables}) => tables.data;
-export const getLoadingState = ({tables}) => tables.loading;
+export const getAll = ({ tables }) => tables.data;
+export const getLoadingState = ({ tables }) => tables.loading;
 
 /* action name creator */
 const reducerName = 'tables';
@@ -13,13 +13,13 @@ const createActionName = name => `app/${reducerName}/${name}`;
 const FETCH_START = createActionName('FETCH_START');
 const FETCH_SUCCESS = createActionName('FETCH_SUCCESS');
 const FETCH_ERROR = createActionName('FETCH_ERROR');
-const UPDATE_TABLES = createActionName('UPDATE_TABLES');
+const UPDATE_STATUS = createActionName('UPDATE_STATUS');
 
 /* action creators */
 export const fetchStarted = payload => ({ payload, type: FETCH_START });
 export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
-export const updateTables = payload => ({ payload, type: UPDATE_TABLES });
+export const updateStatus = payload => ({ payload, type: UPDATE_STATUS });
 
 /* thunk creators */
 export const fetchFromAPI = () => {
@@ -37,10 +37,14 @@ export const fetchFromAPI = () => {
   };
 };
 
-export const updateTablesStatus = (tableId, newStatus) => {
+export const updateTableStatus = (tableId, newStatus) => {
   console.log(tableId, newStatus);
   return (dispatch, getState) => {
-
+    Axios.patch(`${api.url}/${api.tables}/${tableId}`, {
+      status: newStatus,
+    }).then(res => {
+      dispatch(updateStatus(res.data));
+    });
   };
 };
 
@@ -73,6 +77,12 @@ export default function reducer(statePart = [], action = {}) {
           active: false,
           error: action.payload,
         },
+      };
+    }
+    case UPDATE_STATUS: {
+      return {
+        ...statePart,
+        data: action.payload,
       };
     }
     default:
