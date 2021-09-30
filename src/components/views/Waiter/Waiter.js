@@ -16,7 +16,7 @@ class Waiter extends React.Component {
       active: PropTypes.bool,
       error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
     }),
-    changeTableStatus: PropTypes.func,
+    updateStatus: PropTypes.func,
     tables: PropTypes.any,
   }
 
@@ -25,65 +25,56 @@ class Waiter extends React.Component {
     fetchTables();
   }
 
-  changeStatus(tableId, status) {
-    if (status === 'free') {
-      status = 'thinking';
-    } else if (status === 'thinking') {
-      status = 'ordered';
-    } else if (status === 'ordered') {
-      status = 'prepared';
-    } else if (status === 'prepared') {
-      status = 'delivered';
-    } else if (status === 'delivered') {
-      status = 'paid';
-    } else if (status === 'paid') {
-      status = 'free';
-    }
-    const { changeTableStatus } = this.props;
-    changeTableStatus(tableId, status);
-  }
-
-  renderActions(status, tableId) {
+  renderActions(id, status) {
+    const { updateStatus } = this.props;
     switch (status) {
       case 'free':
         return (
           <>
-            <Button onClick={() => {
-              this.changeStatus(tableId, status);
-            }}>
-              thinking</Button>
-            <Button>new order</Button>
+            <Button onClick={() => updateStatus(id, 'thinking')}> thinking</Button>
+            <Button
+              onClick={() => updateStatus(id, 'ordered')}
+              href={process.env.PUBLIC_URL + '/waiter/order/new'}>new order
+            </Button>
           </>
         );
       case 'thinking':
         return (
-          <Button onClick={() => {
-            this.changeStatus(tableId, status);
-          }}>new order</Button>
+          <Button
+            onClick={() => updateStatus(id, 'ordered')}
+            href={process.env.PUBLIC_URL + '/waiter/order/new'}>new order
+          </Button>
         );
       case 'ordered':
         return (
-          <Button onClick={() => {
-            this.changeStatus(tableId, status);
-          }}>prepared</Button>
+          <>
+            <Button onCLick={() => updateStatus(id, 'prepared')}>prepared</Button>
+            <Button href={process.env.PUBLIC_URL + '/waiter/order/new'}>new order</Button>
+          </>
         );
       case 'prepared':
         return (
-          <Button onClick={() => {
-            this.changeStatus(tableId, status);
-          }}>delivered</Button>
+          <Button
+            onClick={() => updateStatus(id, 'delivered')}
+            href={process.env.PUBLIC_URL + '/waiter/order/new'}
+          >delivered
+          </Button>
         );
       case 'delivered':
         return (
-          <Button onClick={() => {
-            this.changeStatus(tableId, status);
-          }}>paid</Button>
+          <Button
+            onClick={() => updateStatus(id, 'paid')}
+            href={process.env.PUBLIC_URL + '/waiter/order/new'}
+          >paid
+          </Button>
         );
       case 'paid':
         return (
-          <Button onClick={() => {
-            this.changeStatus(tableId, status);
-          }}>free</Button>
+          <Button
+            onClick={() => updateStatus(id, 'free')}
+            href={process.env.PUBLIC_URL + '/waiter/order/new'}
+          >free
+          </Button>
         );
       default:
         return null;
@@ -119,23 +110,23 @@ class Waiter extends React.Component {
               </TableRow>
             </TableHead>
             <TableBody>
-              {tables.map(row => (
-                <TableRow key={row.id}>
+              {tables.map(table => (
+                <TableRow key={table.id}>
                   <TableCell component="th" scope="row">
-                    {row.id}
+                    {table.id}
                   </TableCell>
                   <TableCell>
-                    {row.status}
+                    {table.status}
                   </TableCell>
                   <TableCell>
-                    {row.order && (
-                      <Button to={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
-                        {row.order}
+                    {table.order && (
+                      <Button to={`${process.env.PUBLIC_URL}/waiter/order/${table.order}`}>
+                        {table.order}
                       </Button>
                     )}
                   </TableCell>
                   <TableCell>
-                    {this.renderActions(row.status, row.id)}
+                    {this.renderActions(table.id, table.status)}
                   </TableCell>
                 </TableRow>
               ))}
