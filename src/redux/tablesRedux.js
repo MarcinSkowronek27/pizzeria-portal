@@ -40,7 +40,7 @@ export const fetchFromAPI = () => {
 export const updateStatusToAPI = (id, status) => {
   return (dispatch, getState) => {
     Axios
-      .put(`${api.url}/api/${api.tables}/${id}`, {status})
+      .put(`${api.url}/api/${api.tables}/${id}`, { status })
       .then(res => {
         dispatch(updateStatus(res.data));
       })
@@ -88,6 +88,7 @@ export default function reducer(statePart = [], action = {}) {
           active: false,
           error: false,
         },
+        data: statePart.data.map(table => action.payload.id === table.id ? action.payload : table),
       };
     }
     default:
